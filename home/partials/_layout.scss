@@ -205,6 +205,7 @@
 .haircut img:hover {
     transform: scale(1.2);
     z-index: 1;
+    transition: .4s;
 }
 
 .haircut-info {
@@ -212,6 +213,7 @@
     display: flex;
     justify-content: center;
     padding: 14px;
+    gap: 6.3rem;
     background-color: $white-normal;
     z-index: 99;
 }
@@ -225,7 +227,11 @@
     cursor: default;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {    
+    .services-content p {
+        min-width: 0px;
+        line-height: 165%;
+    }
     .haircuts {
         flex-direction: column;
     }
@@ -259,7 +265,7 @@
 .btn-wap {
     position: fixed;
     bottom: 14px;
-    right: 24px;
+    right: 18px;
     z-index: 99;
 
     img {
@@ -272,4 +278,30 @@
     }
 }
 
-// CONTINUAR AULA DE MIN 35:15
+.btn-wap > .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 270px;
+    top: 8px;
+    left: -280px;
+    padding: 4px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: $zap;
+    color: $white-normal;
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+.btn-wap:hover > .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-wap {
+        img {
+            max-width: 64px;
+        }
+    }
+}

@@ -259,6 +259,7 @@ i {
 .haircut img:hover {
   transform: scale(1.2);
   z-index: 1;
+  transition: 0.4s;
 }
 
 .haircut-info {
@@ -266,6 +267,7 @@ i {
   display: flex;
   justify-content: center;
   padding: 14px;
+  gap: 6.3rem;
   background-color: #fff;
   z-index: 99;
 }
@@ -280,6 +282,10 @@ i {
 }
 
 @media screen and (max-width: 768px) {
+  .services-content p {
+    min-width: 0px;
+    line-height: 165%;
+  }
   .haircuts {
     flex-direction: column;
   }
@@ -306,7 +312,7 @@ i {
 .btn-wap {
   position: fixed;
   bottom: 14px;
-  right: 24px;
+  right: 18px;
   z-index: 99;
 }
 .btn-wap img {
@@ -317,6 +323,31 @@ i {
   transform: scale(1.1);
 }
 
+.btn-wap > .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 270px;
+  top: 8px;
+  left: -280px;
+  padding: 4px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #00A884;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.btn-wap:hover > .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-wap img {
+    max-width: 64px;
+  }
+}
 body {
   font-family: "Sora", sans-serif;
   width: 100%;

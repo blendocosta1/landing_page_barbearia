@@ -15,6 +15,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <title>Manstyle Barber</title>
   </head>
@@ -23,7 +26,7 @@
     <div class="bg-home">
       <header>
         <nav class="header-content container">
-          <div class="header-icons">
+          <div class="header-icons" data-aos="fade-down">
             <!-- ICON INSTAGRAM-->
             <a href="#" aria-label="acesse nosso Instagram">
               <i class="fa-brands fa-instagram fa-2x"></i>
@@ -40,26 +43,26 @@
             </a>
           </div>
 
-          <div class="header-logo">
+          <div class="header-logo" data-aos="fade-up" data-aos-delay="300">
             <!-- LOGO -->
-            <img src="/assets/img/logo.svg" alt="Logo da Barbearia" />
+            <img src="/assets/img/logo.svg" data-aos="flip-up" data-aos-delay="300" data-aos-duration="1500" alt="Logo da Barbearia" />
           </div>
 
-          <div>
-            <a href="#" class="header-button"> Agendar Horário </a>
+          <div data-aos="fade-down">
+            <a target="_blank" href="https://api.whatsapp.com/send/?phone=551112345678&text=tenho%20interece%20na%20landing%20page%20de%20barbearia" class="header-button"> Converse Conosco </a>
           </div>
         </nav>
 
-        <main class="hero container">
+        <main class="hero container" data-aos="fade-up" data-aos-delay="400">
           <h1>ESTILO É UM REFLEXO DA SUA ATITUDE E SUA PERSONALIDADE.</h1>
           <p>Horário de funcionamento: 09:00 ás 19:00</p>
           <a
-            href="#"
+            href="https://api.whatsapp.com/send/?phone=551112345678&text=tenho%20interece%20na%20landing%20page%20de%20barbearia"
             class="button-contact"
-            aria-label="Agendar Horário"
+            aria-label="Converse Conosco"
             target="_blank"
           >
-            Agendar horário
+            Converse Conosco
           </a>
         </main>
       </header>
@@ -68,11 +71,11 @@
     <!-- ABOUT -->
       <section class="about">
         <div class="container about-content">
-          <div>
+          <div data-aos="zoom-in" data-aos-delay="100">
             <img src="../assets/img/3img.svg" alt="Imagem sobre a barbearia" />
           </div>
 
-          <div class="about-description">
+          <div class="about-description" data-aos="zoom-out-left" data-aos-delay="250">
             <h2>Sobre</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, reprehenderit voluptatibus pariatur quaerat delectus officiis optio sit distinctio libero voluptatem eos fugit exercitationem ad facilis quas modi quod deleniti odio.</p>
             <p>Horário de funcionamento: <strong>09:00h</strong> às <strong>19:00h</strong></p>
@@ -89,7 +92,7 @@
         </div>
 
         <section class="haircuts">
-          <div class="haircut">
+          <div class="haircut" data-aos="fade-up" data-aos-delay="150">
             <img src="../assets/img/1.png" alt="corte normal">
             <div class="haircut-info">
               <strong>Corte normal</strong>
@@ -97,16 +100,16 @@
             </div>
           </div>
 
-          <div class="haircut">
-            <img src="../assets/img/1.png" alt="corte normal">
+          <div class="haircut" data-aos="fade-up" data-aos-delay="250">
+            <img src="../assets/img/2.png" alt="corte normal">
             <div class="haircut-info">
               <strong>Corte fade</strong>
               <button>R$ 39,00</button>
             </div>
           </div>
 
-          <div class="haircut">
-            <img src="../assets/img/1.png" alt="corte normal">
+          <div class="haircut" data-aos="fade-up" data-aos-delay="350">
+            <img src="../assets/img/3.png" alt="corte normal">
             <div class="haircut-info">
               <strong>Corte degradê</strong>
               <button>R$ 40,00</button>
@@ -150,10 +153,15 @@
 
       </footer>
 
-      <!-- Button Whatsapp-->
+      <!-- Button Whatsapp--> 
 
-      <a class="btn-wap" target="_blank" href="#">
+      <a class="btn-wap" target="_blank" href="https://api.whatsapp.com/send/?phone=5591984409973&text=tenho%20interece%20na%20landing%20page%20de%20barbearia" data-aos="zoom-in-up" data-aos-delay="400"/>
         <img src="../assets/img/whatssapp.svg" alt="img whatsapp" />
+        <span class="tooltip-text">Tem interece nesta landing page?
+          <strong>Converse a Gente!</strong></span>
       </a>
+
+      <script src="script.js"></script>
   </body>
 </html>
+
